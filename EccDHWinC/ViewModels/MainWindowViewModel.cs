@@ -306,7 +306,7 @@ namespace EccDHWinC.ViewModels
 
       if ( (bobPrivateBytes != null) && (alicePublicBytes != null) )
         {
-          byte[] bobAliceSharedBytes = Curve25519.GetSharedSecret(bobPrivateBytes, alicePublicBytes);
+          bobAliceSharedBytes = Curve25519.GetSharedSecret(bobPrivateBytes, alicePublicBytes);
           BobAliceSharedKeyText = BitConverter.ToString(bobAliceSharedBytes).Replace("-","");
         }
     }
